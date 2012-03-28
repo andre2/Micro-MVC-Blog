@@ -1,0 +1,1 @@
+[05-Nov-2011 21:28:57] PHP Notice:  Undefined index: eowekofko in C:\wamp\www\framework\core\startup.php on line 33

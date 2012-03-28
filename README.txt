@@ -16,6 +16,5 @@ This is a simple blog app built on a work in progress micro-MVC framework by Aus
 
 /-- TODO --/
 
-User authentication
-User registration
+Routing
 Commenting

@@ -32,14 +32,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `name` varchar(64) NOT NULL,
   `slug` varchar(64) NOT NULL,
   PRIMARY KEY (`cat_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `categories`
---
-
-INSERT INTO `categories` (`cat_id`, `parent_id`, `name`, `slug`) VALUES
-(1, 0, 'Default', 'default');
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -56,14 +49,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `date_posted` int(11) NOT NULL DEFAULT '0',
   `cat_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `author`, `title`, `slug`, `post`, `date_posted`, `cat_id`) VALUES
-(1, 'Austin', 'Lorem ipsum dolor sit amet', 'lorem-ipsum-dolor-sit-amet', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae risus neque. Vestibulum vulputate rhoncus convallis. Phasellus tincidunt libero ut justo pellentesque sit amet gravida felis pharetra. Morbi cursus tellus ipsum. Duis nunc est, rutrum euismod ultricies et, suscipit eget tellus. Nullam eu erat libero. Duis semper viverra est, non aliquam metus suscipit eget.\r\n\r\nPhasellus sit amet nisl sed neque tincidunt accumsan sollicitudin at dui. Nam sit amet sem arcu, sit amet fringilla dolor. Nam vitae adipiscing odio. Vestibulum a sodales odio. Integer magna neque, scelerisque eu lobortis a, sagittis vel nunc. Aenean mollis, est non faucibus dictum, lacus nulla tempor massa, a congue elit ante quis ante. Praesent congue scelerisque suscipit. Maecenas vehicula convallis metus, quis gravida nisl porta nec. Ut aliquam, quam et molestie tincidunt, eros sapien aliquet libero, rutrum tristique est magna at sem. Aenean semper leo vitae lorem egestas non mollis eros imperdiet. Nulla ut ornare magna. In tellus nisi, porttitor ut gravida id, aliquet eget sem. Sed at tincidunt lacus.\r\n\r\nPellentesque tristique, elit non hendrerit imperdiet, mi nunc dapibus odio, at hendrerit justo mi eu dolor. Nulla facilisi. Quisque auctor auctor interdum. Mauris non ligula enim, nec porta orci. Curabitur sed mi eu nisl dignissim pulvinar ut eget arcu. Etiam ante quam, placerat eget lacinia a, bibendum in quam. In vitae dignissim nulla. Donec iaculis odio sit amet leo accumsan consectetur. Vestibulum placerat pulvinar turpis. Nam at augue et urna facilisis gravida at at orci.', 1329780813, 1);
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -76,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `role_id` tinyint(1) NOT NULL,
   `email` varchar(320) NOT NULL,
   `username` varchar(64) NOT NULL,
-  `password` varchar(123) NOT NULL,
+  `password` varchar(512) NOT NULL,
   `salt` varchar(10) NOT NULL,
   `ip` varchar(39) NOT NULL,
   `date_registered` int(11) NOT NULL,
@@ -84,14 +70,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `validated` tinyint(1) NOT NULL DEFAULT '0',
   `val_code` varchar(10) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`user_id`, `role_id`, `email`, `username`, `password`, `salt`, `ip`, `date_registered`, `last_active`, `validated`, `val_code`) VALUES
-(1, 0, 'admin@example.com', 'admin', 'qMNtAe9IRxiLJu7FW07VwSppQVlZmDISyt2Reb6qt88=', 'rl5w9t3s4g', '127.0.0.1', 1329781006, 0, 1, 'einq1rvk60');
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

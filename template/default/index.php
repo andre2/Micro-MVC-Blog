@@ -1,1 +1,1 @@
-<div id="content"><?php echo $contents; ?></div>
+<div class="span9"><?php echo $contents; ?></div>

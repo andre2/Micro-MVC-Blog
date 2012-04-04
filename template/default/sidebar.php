@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div class="span3">
 
 <ul>
 	<li><a href="<?php echo _BASEURL_; ?>">Home</a></li>

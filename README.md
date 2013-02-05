@@ -1,7 +1,7 @@
 MicroMVC Blog App
 =========
 
-This is a simple blog app built on a work in progress micro-MVC framework by Austin Overton.
+A simple blog application built on a custom MVC framework. I built the framework while learning more about the intricacies of MVC.
 
 
 Installation
